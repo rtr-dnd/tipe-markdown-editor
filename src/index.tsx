@@ -17,7 +17,7 @@ import { SearchResult } from "./components/LinkEditor";
 import { EmbedDescriptor } from "./types";
 // import SelectionToolbar from "./components/SelectionToolbar";
 // import BlockMenu from "./components/BlockMenu";
-import LinkToolbar from "./components/LinkToolbar";
+// import LinkToolbar from "./components/LinkToolbar";
 import Tooltip from "./components/Tooltip";
 import Extension from "./lib/Extension";
 import ExtensionManager from "./lib/ExtensionManager";
@@ -587,7 +587,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
                   onCreateLink={this.props.onCreateLink}
                   tooltip={tooltip}
                 /> */}
-                <LinkToolbar
+                {/* <LinkToolbar
                   view={this.view}
                   isActive={this.state.linkMenuOpen}
                   onCreateLink={this.props.onCreateLink}
@@ -596,7 +596,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
                   onShowToast={this.props.onShowToast}
                   onClose={this.handleCloseLinkMenu}
                   tooltip={tooltip}
-                />
+                /> */}
                 {/* <BlockMenu
                   view={this.view}
                   commands={this.commands}

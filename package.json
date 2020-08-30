@@ -1,6 +1,6 @@
 {
-  "name": "rich-markdown-editor",
-  "description": "A rich text editor with Markdown shortcuts",
+  "name": "tipe-markdown-editor",
+  "description": "Rich markdown editor modified for Tipe editor",
   "version": "10.6.5",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -91,9 +91,10 @@
     "text",
     "wysiwyg"
   ],
-  "author": "Tom Moor <tom.moor@gmail.com>",
+  "author": "ritar <skysoyn@gmail.com>",
   "bugs": {
     "url": "https://github.com/outline/rich-markdown-editor/issues"
   },
-  "homepage": "https://github.com/outline/rich-markdown-editor#readme"
+  "homepage": "https://github.com/outline/rich-markdown-editor#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }

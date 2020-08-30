@@ -15,8 +15,8 @@ import { light as lightTheme, dark as darkTheme } from "./theme";
 import Flex from "./components/Flex";
 import { SearchResult } from "./components/LinkEditor";
 import { EmbedDescriptor } from "./types";
-import SelectionToolbar from "./components/SelectionToolbar";
-import BlockMenu from "./components/BlockMenu";
+// import SelectionToolbar from "./components/SelectionToolbar";
+// import BlockMenu from "./components/BlockMenu";
 import LinkToolbar from "./components/LinkToolbar";
 import Tooltip from "./components/Tooltip";
 import Extension from "./lib/Extension";
@@ -34,26 +34,26 @@ import CodeBlock from "./nodes/CodeBlock";
 import CodeFence from "./nodes/CodeFence";
 import CheckboxList from "./nodes/CheckboxList";
 import CheckboxItem from "./nodes/CheckboxItem";
-import Embed from "./nodes/Embed";
+// import Embed from "./nodes/Embed";
 import HardBreak from "./nodes/HardBreak";
-import Heading from "./nodes/Heading";
+// import Heading from "./nodes/Heading";
 import HorizontalRule from "./nodes/HorizontalRule";
-import Image from "./nodes/Image";
+// import Image from "./nodes/Image";
 import ListItem from "./nodes/ListItem";
 import Notice from "./nodes/Notice";
 import OrderedList from "./nodes/OrderedList";
 import Paragraph from "./nodes/Paragraph";
-import Table from "./nodes/Table";
-import TableCell from "./nodes/TableCell";
-import TableHeadCell from "./nodes/TableHeadCell";
-import TableRow from "./nodes/TableRow";
+// import Table from "./nodes/Table";
+// import TableCell from "./nodes/TableCell";
+// import TableHeadCell from "./nodes/TableHeadCell";
+// import TableRow from "./nodes/TableRow";
 
 // marks
 import Bold from "./marks/Bold";
 import Code from "./marks/Code";
 import Highlight from "./marks/Highlight";
 import Italic from "./marks/Italic";
-import Link from "./marks/Link";
+// import Link from "./marks/Link";
 import Strikethrough from "./marks/Strikethrough";
 import TemplatePlaceholder from "./marks/Placeholder";
 
@@ -233,40 +233,40 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
         }),
         new CheckboxList(),
         new CheckboxItem(),
-        new Embed(),
+        // new Embed(),
         new ListItem(),
         new Notice(),
-        new Heading({
-          onShowToast: this.props.onShowToast,
-          offset: this.props.headingsOffset,
-        }),
+        // new Heading({
+        //   onShowToast: this.props.onShowToast,
+        //   offset: this.props.headingsOffset,
+        // }),
         new HorizontalRule(),
-        new Image({
-          uploadImage: this.props.uploadImage,
-          onImageUploadStart: this.props.onImageUploadStart,
-          onImageUploadStop: this.props.onImageUploadStop,
-          onShowToast: this.props.onShowToast,
-        }),
-        new Table(),
-        new TableCell({
-          onSelectTable: this.handleSelectTable,
-          onSelectRow: this.handleSelectRow,
-        }),
-        new TableHeadCell({
-          onSelectColumn: this.handleSelectColumn,
-        }),
-        new TableRow(),
+        // new Image({
+        //   uploadImage: this.props.uploadImage,
+        //   onImageUploadStart: this.props.onImageUploadStart,
+        //   onImageUploadStop: this.props.onImageUploadStop,
+        //   onShowToast: this.props.onShowToast,
+        // }),
+        // new Table(),
+        // new TableCell({
+        //   onSelectTable: this.handleSelectTable,
+        //   onSelectRow: this.handleSelectRow,
+        // }),
+        // new TableHeadCell({
+        //   onSelectColumn: this.handleSelectColumn,
+        // }),
+        // new TableRow(),
         new Bold(),
         new Code(),
         new Highlight(),
         new Italic(),
         new TemplatePlaceholder(),
-        new Link({
-          onKeyboardShortcut: this.handleOpenLinkMenu,
-          onClickLink: this.props.onClickLink,
-          onClickHashtag: this.props.onClickHashtag,
-          onHoverLink: this.props.onHoverLink,
-        }),
+        // new Link({
+        //   onKeyboardShortcut: this.handleOpenLinkMenu,
+        //   onClickLink: this.props.onClickLink,
+        //   onClickHashtag: this.props.onClickHashtag,
+        //   onHoverLink: this.props.onHoverLink,
+        // }),
         new Strikethrough(),
         new OrderedList(),
         new History(),
@@ -578,7 +578,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
             />
             {!readOnly && this.view && (
               <React.Fragment>
-                <SelectionToolbar
+                {/* <SelectionToolbar
                   view={this.view}
                   commands={this.commands}
                   isTemplate={this.props.template === true}
@@ -586,7 +586,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
                   onClickLink={this.props.onClickLink}
                   onCreateLink={this.props.onCreateLink}
                   tooltip={tooltip}
-                />
+                /> */}
                 <LinkToolbar
                   view={this.view}
                   isActive={this.state.linkMenuOpen}
@@ -597,7 +597,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
                   onClose={this.handleCloseLinkMenu}
                   tooltip={tooltip}
                 />
-                <BlockMenu
+                {/* <BlockMenu
                   view={this.view}
                   commands={this.commands}
                   isActive={this.state.blockMenuOpen}
@@ -609,7 +609,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
                   onImageUploadStop={this.props.onImageUploadStop}
                   onShowToast={this.props.onShowToast}
                   embeds={this.props.embeds}
-                />
+                /> */}
               </React.Fragment>
             )}
           </React.Fragment>

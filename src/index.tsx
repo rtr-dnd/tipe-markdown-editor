@@ -58,7 +58,7 @@ import Strikethrough from "./marks/Strikethrough";
 import TemplatePlaceholder from "./marks/Placeholder";
 
 // plugins
-import BlockMenuTrigger from "./plugins/BlockMenuTrigger";
+// import BlockMenuTrigger from "./plugins/BlockMenuTrigger";
 import History from "./plugins/History";
 import Keys from "./plugins/Keys";
 import Placeholder from "./plugins/Placeholder";
@@ -278,10 +278,10 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
           onSaveAndExit: this.handleSaveAndExit,
           onCancel: this.props.onCancel,
         }),
-        new BlockMenuTrigger({
-          onOpen: this.handleOpenBlockMenu,
-          onClose: this.handleCloseBlockMenu,
-        }),
+        // new BlockMenuTrigger({
+        //   onOpen: this.handleOpenBlockMenu,
+        //   onClose: this.handleCloseBlockMenu,
+        // }),
         new Placeholder({
           placeholder: this.props.placeholder,
         }),
@@ -555,7 +555,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
       readOnly,
       readOnlyWriteCheckboxes,
       style,
-      tooltip,
+      // tooltip,
       className,
       onKeyDown,
     } = this.props;

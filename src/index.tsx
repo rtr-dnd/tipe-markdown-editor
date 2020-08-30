@@ -53,7 +53,7 @@ import Bold from "./marks/Bold";
 import Code from "./marks/Code";
 import Highlight from "./marks/Highlight";
 import Italic from "./marks/Italic";
-// import Link from "./marks/Link";
+import Link from "./marks/Link";
 import Strikethrough from "./marks/Strikethrough";
 import TemplatePlaceholder from "./marks/Placeholder";
 
@@ -261,12 +261,12 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
         new Highlight(),
         new Italic(),
         new TemplatePlaceholder(),
-        // new Link({
-        //   onKeyboardShortcut: this.handleOpenLinkMenu,
-        //   onClickLink: this.props.onClickLink,
-        //   onClickHashtag: this.props.onClickHashtag,
-        //   onHoverLink: this.props.onHoverLink,
-        // }),
+        new Link({
+          onKeyboardShortcut: this.handleOpenLinkMenu,
+          onClickLink: this.props.onClickLink,
+          onClickHashtag: this.props.onClickHashtag,
+          onHoverLink: this.props.onHoverLink,
+        }),
         new Strikethrough(),
         new OrderedList(),
         new History(),
